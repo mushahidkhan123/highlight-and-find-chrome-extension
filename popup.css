@@ -1,0 +1,12 @@
+.title {
+	font-family: 'Poiret One', cursive;
+	text-align: center;
+}
+
+.titleArea{
+	border-bottom: 2px solid black;
+}
+body{
+	width: 400px;
+	height: 350px;
+}

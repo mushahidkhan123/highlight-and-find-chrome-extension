@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "What does this mean?",
+  "description": "This extension allows users to highlight a word and quickly get the word's definition",
+  "version": "1.0",
+ "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon":"img.png",
+    "background": {
+    "scripts": ["background.js"]
+  },   }
+}
