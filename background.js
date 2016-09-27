@@ -1,4 +1,8 @@
-chrome.tabs.onUpdated.addListener(function(id, info, tab){
-    chrome.pageAction.show(tab.id);
-    chrome.tabs.executeScript(null, {"file": "popup.js"});
-});
+chrome.runtime.onMessage.addListener(
+  function(response, sender, sendResponse) {
+  	chrome.storage.sync.set({"word": response},function(){
+  		if(chrome.runtime.error){
+  			console.log("Runtime error.")
+  		}
+  	});
+   });

@@ -9,8 +9,17 @@
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon":"img.png",
-    "background": {
+    "default_icon":"img.png"
+  },
+    "permissions": [ "storage" ],
+
+ "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
     "scripts": ["background.js"]
-  },   }
+  }
 }
